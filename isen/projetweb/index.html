@@ -1,0 +1,56 @@
+<!--
+File        : index.html
+Created on  : 
+Authors     : Clément DUPLOYEZ / Thomas FOSSATI / Guillaume CATTO
+Description : main page for the TBP Solver.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TBP Solver</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" type="image/png" href="css/elements/website_icon.png" />
+    </head>
+    <body>
+        <header id="title"><img src="./css/elements/website_icon.png" alt="Rubik's Cube"><span id="title_big">TBP Solver</span><span id="title_small">TBP</span></header>
+        <nav id="menu">
+            <div id="menu_button"><p id="visible_menu_button_label">Cacher</p></div>
+            <p id="menu_title">menu</p>
+            <ul>
+                <li><span class="menu_label">Nombre d'emplacements</span> <span class="separator">|</span> <input type="number" class="integer_input" id="marker_number"></li>
+                <li>
+                    <span class="menu_label">Trajet</span> <span class="separator">|</span> 
+                    <span class="menu_label">n1 </span> <input type="number" class="integer_input" id="n1"> 
+                    <span class="separator">|</span> 
+                    <span class="menu_label">n2 </span> <input type="number" class="integer_input" id="n2">
+                </li>
+                <li><span class="menu_label">Type de trajet</span> <span class="separator">|</span>
+                    <select id = "distance_type">
+                        <option value = "as_the_crow_flies">À vol d'oiseau</option>
+                        <option value = "on_foot">À pied</option>
+                    </select>
+                </li>
+                <li><span class="menu_label">Distance</span> <span class="separator">|</span> <span id="update_distance">Non calculée</span> <span id="distance_unit"></span></li>
+                <li><button type="button" id="submit_button">Rafraîchir</button> <button type="button" id="display_matrix_button">Matrice</button></li>
+                <li><button type="button" id="compute_distances_button">Recalculer</button> <button type="button" id="clear_cache_button">Effacer le cache</button></li>
+                <!--<li><span class="menu_label">Matrice</span></li>
+                <li class="is_visible">À vol d'oiseau :
+                    <table class="matrix" id="as_the_crow_flies_distance_matrix">
+                    </table>
+                </li>
+                <li class="is_hidden">À pied :
+                    <table class="matrix" id="on_foot_distance_matrix">
+                    </table>
+                </li>-->
+            </ul>
+        </nav>
+        <section id="map-canvas">
+            <p id="google_maps_error">Échec au chargement de Google Maps</p>
+        </section>
+        <!-- Main script -->
+        <script data-main="./scripts/loader.js" src="./lib/require.js"></script>
+    </body>
+</html>

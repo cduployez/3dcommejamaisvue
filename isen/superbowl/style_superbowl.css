@@ -1,0 +1,279 @@
+body {
+	margin:0;
+	background-color:black;
+	font-family:sintony, monospace;
+}
+
+@font-face {
+	font-family: "sintony";
+	src: url("fonts/Sintony-Regular.ttf");
+}
+
+@font-face {
+	font-family: "clock";
+	src: url("fonts/ds_digital/DS-DIGI.TTF");
+}
+
+@font-face {
+	font-family: "scoreboard";
+	src: url("fonts/score_board/scoreboard.ttf");
+}
+
+#body {
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+	min-height:10px;
+	overflow:hidden;
+	margin-top:20px;
+	color:red;
+}
+
+
+/******* BOARD *******/
+
+#board {
+	font-family:scoreboard;
+}
+
+.teamboard {
+	margin-top:50px;
+	background-color:rgba(255,0,255,0.05);
+	/*border:1px solid white;*/
+	width:25%;
+	min-height:10px;
+	float:left;
+	overflow:hidden;
+	border-radius:5px;
+    box-shadow:0px 0px 10px red;
+    margin:2.5%;
+}
+	/******* TEAM BOARD *******/
+
+.teamname {
+	width:100%;
+	display:block;
+}
+
+h2 {
+	text-align:center;
+	vertical-align:middle;
+}
+
+.teamlogo {
+	clear:left;
+	width:100%;
+	height:180px;
+}
+
+.teamlogo img {
+	display:block;
+	max-width:70%;
+	max-height:160px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+}
+
+.teamcheckboard {
+	width:99%;
+}
+
+#checkleft {
+	float:left;
+}
+
+#checkright {
+	float:right;
+}
+
+
+.check {
+	float:left;
+	width:33%;
+	text-align:center;
+}
+
+#scoreboard {
+	/*border:1px dotted black;*/
+	width:40%;
+	min-height:10px;
+	float:left;
+}
+
+.score {
+	width:100%;
+	padding:10px;
+	text-align:center;
+	font-family:scoreboard;
+	font-size:50pt;
+}
+
+#scoresuperbowlteam1 {
+	display:inline;
+}
+
+#scoresuperbowlteam2 {
+	display:inline;
+}
+
+#time {
+	width:100%;
+	padding:10px;
+	text-align:center;
+	font-family:clock;
+	font-size:30pt;
+}
+
+#timetools {
+	margin-top:-50px;
+	width:100%;
+	padding:10px;
+	text-align:center;
+	font-family:clock;
+	font-size:10pt;
+	margin-bottom:20px;
+}
+
+#timetools a {
+	text-decoration:none;
+	border:1px dotted red;
+	color:red;
+	padding:1px;
+	text-align:center;
+	vertical-align: middle;
+	margin-right:2px;
+	margin-left:2px;
+}
+
+#timetools a:focus {
+	color:black;
+}
+
+.table thead {
+	text-align:center;
+}
+
+.table table {
+	width:98%;
+	text-align: center;
+	vertical-align: middle;
+	font-size:20pt;
+}
+
+.tdteamname {
+	width:40%;
+	text-align:center;
+}
+
+.table tr {
+	height:30px;
+}
+
+.table td {
+	border:1px dotted grey;
+}
+
+/******* TIMELINE *******/
+
+#timeline {
+	clear:both;
+	float:left;
+	margin-top:50px;
+	width:100%;
+	margin-left:0 auto;
+	margin-right:0 auto;
+	margin-bottom:100px;
+	font-size:12pt;
+}
+
+.timelinerow a {
+	text-decoration:none;
+	color:red;
+}
+
+.timelinerow {
+	display:block;
+	width:100%;
+	overflow:hidden;
+	border-top:1px dotted grey;
+	text-align:center;
+}
+
+.timelinerow:hover {
+	background-color:rgba(255,0,255,0.03);
+}
+
+.timelineactionleft {
+	width:39%;
+	text-align:center;
+	padding:0;
+	float:left;
+}
+
+.timelineactionleft p {
+	width:100%;
+	height:20px;
+}
+
+.timelineactionleft input{
+	width:100%;
+	background-color:rgba(50,50,50,0.5);
+	border:1px dotted red;
+	color:red;
+	font-family:scoreboard;
+	font-size:13pt;
+}
+
+.timelineactionright p {
+	width:100%;
+	height:20px;
+}
+
+.timelineactionright input{
+	width:100%;
+	background-color:rgba(50,50,50,0.5);
+	border:1px dotted red;
+	color:red;
+	font-family:scoreboard;
+	font-size:13pt;
+	text-align:center;
+}
+
+.timelineactionright {
+	width:39%;
+	text-align:center;
+	padding:0;
+	float:right;
+}
+
+.timelinetime {
+	width:19%;
+	float:left;
+	text-align:center;
+	padding:0;
+	margin-left:1.5%;
+	font-family:clock;
+	font-size:16pt;
+}
+
+#timelinepage2 {
+	display:none;
+	margin-top:-20px;
+}
+
+input:hover {
+    box-shadow:0px 0px 10px red;
+}
+
+/*Si resolution en dessous de 1092.8px:*/
+@media all and (max-width: 1092.8px){
+	#body {width:100%;
+		margin:0;}
+	/*.topbar{display:none;}*/
+}
+
+/*Si resolution au dessus de 1092.8px:*/
+@media all and (min-width:1092.8px){
+	/*.topbar{display:block;}*/
+}

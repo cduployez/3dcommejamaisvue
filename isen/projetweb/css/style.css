@@ -1,0 +1,451 @@
+/*
+File        : style.css
+Created on  : Feb 15, 2014, 3:15:48 PM
+Authors     : Clément DUPLOYEZ / Thomas FOSSATI / Guillaume CATTO
+Description : stylesheet for the TBP Solver.
+
+    1.  COMMON (CSS properties which are common to all types of device)
+        >TAGS
+        >IDS
+        >CLASSES
+        >FONTS
+    2.  SMARTPHONES
+        >TAGS
+        >IDS
+        >CLASSES
+        >FONTS
+    3.  TABLETS
+        >TAGS
+        >IDS
+        >CLASSES
+        >FONTS
+    4.  COMPUTERS
+        >TAGS
+        >IDS
+        >CLASSES
+        >FONTS
+*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COMMON ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* TAGS */
+body {
+    background: rgb(220,220,220);
+    font-family: "PTC55F", sans-serif;
+    height: 95%;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.2px;
+}
+button {
+    background: rgb(75,75,75);
+    border: 0 !important;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    -moz-appearance: none;
+    outline: none;        
+    text-align: center;
+    text-indent: 0.01px;
+    text-overflow: "";
+    vertical-align: middle;
+    -webkit-appearance: none; 
+}
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+input {
+    background: rgb(75,75,75);
+    button::-moz-focus-inner,
+    input[type="button"]::-moz-focus-inner, 
+    input[type="submit"]::-moz-focus-inner, 
+    input[type="reset"]::-moz-focus-inner {
+        padding: 0 !important;
+        border: 0 none !important;
+    }
+    border-radius: 2px;
+    color: white;
+    height: 15px;
+    width: 300px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+select {
+    background: rgb(75,75,75);
+    border: 0 !important;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    -moz-appearance: none;
+    outline: none;        
+    text-align: center;
+    text-indent: 0.01px;
+    text-overflow: "";
+    vertical-align: middle;
+    -webkit-appearance: none;
+}
+select option {
+    cursor: pointer;
+}
+ul li {
+    margin-bottom: 5px;
+    padding: 0;
+}
+/* IDS */
+#google_maps_error {
+    color: rgb(150,150,150);
+    margin: 0 auto;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    z-index: -999;
+}
+#google_maps_error:hover {
+    cursor: default;
+}
+#map-canvas {
+    height: 100%;
+    margin: 0px;
+    padding: 0px
+}
+#matrix_section {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    width: 100%;
+}
+#menu {
+    background: rgb(240,240,240);
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 0px 0px 3px black;
+    color: rgb(75,75,75);
+    font-family: "PTC55F", sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0px 0px 1px white;
+    transition: all .4s ease-in;
+    word-spacing: Normal;
+    -webkit-transition: all .4s ease-in;
+    z-index: 999;
+}
+#menu ul {
+    list-style-type: none;
+}
+#menu ul li:before {
+    color: rgb(180, 180, 180);
+    cursor: default;
+    content: "> ";
+}
+#menu_button {
+    background: rgb(128,114,89);
+    box-shadow: 0.1px 0px 0.1px black;
+    cursor: pointer;
+    color: white;
+    font-family: "PTC55F", serif;
+    font-weight: bold;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    text-align: center;
+    text-shadow: 0px 0px 1px black;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+#menu_title {
+    color: rgb(170,170,170);
+    cursor: default;
+    font-family: "PTS75F", sans-serif;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+#title {
+    background: rgb(75,75,75);
+    box-shadow: 0px 0px 1px black;
+    color: white;
+    cursor: default;
+    font-family: "AbrilFatface-Regular", serif;
+    -khtml-user-select: none;
+    margin: 0;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    padding: 0;
+    text-shadow: 0px 0px 10px black;
+    text-transform: uppercase;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+#title img {
+    float: left;
+}
+/* CLASSES */
+.integer_input {        
+    text-align: center;
+    vertical-align: middle;
+}
+.is_hidden {
+    display: none;
+}
+.is_visible {
+    display: initial;
+}
+.matrix {
+    background: rgb(75,75,75);
+    border-collapse: collapse;
+    color: white;
+    text-align: center;
+    text-shadow: none;
+}
+.matrix td {
+    border: 1px rgb(170,170,170) solid;
+    text-align: center;
+}
+.matrix td:hover {
+    background: rgb(240,240,240);
+    color: black;
+}
+.menu_label {
+    color: rgb(229,78,67);
+    cursor: default;
+    font-family: "PTS75F", sans-serif;
+    font-weight: bold;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+.separator {
+    color: rgb(180, 180, 180);
+    cursor: default;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+.table_cursor {
+    background: rgb(229,78,67);;
+    color: white;
+}
+/* FONTS */
+@font-face{
+    font-family : "AbrilFatface-Regular";
+    src : url('elements/fonts/AbrilFatface-Regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family : "PTS75F";
+    src : url('elements/fonts/PTS75F.ttf');
+    font-style: normal;
+    font-weight: Bold;
+}
+@font-face{
+    font-family : "PTC55F";
+    src : url('elements/fonts/PTC55F.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SMARTPHONES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media screen and (max-width: 414px) {
+    /* TAGS */
+    button {
+        height: 40px;
+        width: 115px;
+    }
+    input {
+        font-size: 1.2em;
+    }
+    select {
+        height: 40px;
+        padding-bottom: 7px;        
+        padding-top: 7px;
+        text-align: center;
+        vertical-align: middle;
+        width: 115px;
+    }
+    select option {
+        height: 40px;
+        padding-top:15px;
+    }
+    /* IDS */
+    #menu {
+        font-size: 0.9em;
+        height: 100vh;
+        position: absolute;
+        top: 40px;
+        width: 100%;
+    }
+    #menu ul li {
+        margin-left: -35px;
+        margin-bottom: 25px;
+    }
+    #menu_button {
+        border-radius: 7px;
+        box-shadow: 0px 0px 10px white;
+        font-size: 0.3em;
+        height: 30px;
+        position: fixed;
+        right: 10px;
+        top: 5px;
+        width: 30px;
+    }
+    #menu_button p {
+        font-size: 2em;
+        height: 30px;
+    }
+    #menu_title {
+        font-size: 1.8em;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+    #title {
+        font-size: 2em;
+        height: 40px;
+    }
+    #title img {
+        margin-right: 5px;
+        width: 40px;
+    }
+    /* CLASSES */
+    .integer_input {
+        height: 30px;
+        width: 50px;
+    }
+    /* FONTS */
+}
+@media screen and (min-width: 305px) {
+    /* TAGS */
+    /* IDS */
+    #title_small {
+        display: none;
+    }
+    #title_big {
+        display: initial;
+    }
+    /* CLASSES */
+    /* FONTS */
+}
+@media screen and (max-width: 304px) {
+    /* TAGS */
+    /* IDS */
+    #menu {
+        text-align: center;
+    }
+    #menu ul li:before {
+        display: none;
+    }
+    #title_small {
+        display: initial;
+    }
+    #title_big {
+        display: none;
+    }
+    /* CLASSES */
+    .separator {
+        display: none;
+    }
+    /* FONTS */
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TABLETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*@media screen and (min-width: 200px) and (max-width: 640px) {
+    /* TAGS */
+    /* IDS */
+    /* CLASSES */
+    /* FONTS */
+/*}*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COMPUTERS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media screen and (min-width: 415px) {
+    /* TAGS */
+    body {   
+        font-size: 15px;
+    }
+    select {
+        width: 115px;
+    }
+    /* IDS */
+    #menu {
+        font-size: 15px;
+        left: 0px;
+        padding-bottom: 10px;
+        position: absolute;
+        top: 45px;
+        width: 280px;
+    }
+    #menu ul {
+        overflow:  hidden;
+    }
+    #menu ul:hover {
+        overflow: visible;
+    }
+    #menu ul li {
+        margin-left: -35px;
+    }
+    #menu_button {
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        font-size: 0.8em;
+        height: 60px;
+        left: 280px;
+        position: absolute;
+        width: 15px;
+    }
+    #menu_button p {
+        
+        height: 60px;
+        left: 22px;
+        -moz-transform: rotate(-90deg);
+        position: relative;
+        -webkit-transform: rotate(-90deg);
+    }
+    #menu_title {
+        font-size: 2em;
+        margin-bottom: 0px;
+        margin-left: 20px;
+        margin-top: 0px;
+        padding: 0;
+    }
+    #title {
+        font-size: 2em;
+        height: 45px;
+    }
+    #title img {
+        margin-right: 5px;
+        width: 45px;
+    }
+    #title_small {
+        display: none;
+    }
+    #title_big {
+        display: initial;
+    }
+    /* CLASSES */
+    .integer_input {
+        width: 30px;
+    }
+    .matrix {
+        font-size: 0.8em;
+    }
+    .menu_label {
+        font-size: .9em;
+    }
+    /* FONTS */
+}

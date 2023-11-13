@@ -1,0 +1,307 @@
+body {
+	margin:0;
+	font-family:sans-serif;
+}
+
+.body {
+	width:910px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:30px;
+}
+
+/* bar */
+
+	.bar {
+		width:910px;
+		height:110px;
+	}
+
+		.liveTV {
+			float:left;
+			background-color:black;
+			text-align:center;
+			padding-top:100px;
+			padding-bottom:10px;
+			width:12%;
+		}
+
+			.title2-part1 {
+				font-style:italic;
+				color:white;
+				display:inline;
+				font-size:16pt;
+				font-variant:bold;
+				vertical-align:bottom;
+			}
+
+			.title2-part2 {
+				font-style:italic;
+				font-weight:bold;
+				color:#7fb9d7;
+				font-size:14pt;
+				display:inline;
+				vertical-align:bottom;
+			}
+
+		.menu-bar {
+			background-color:white;
+			float:right;
+			width:80%;
+		}
+
+			.menu-title {
+				float:right;
+				width:100%;
+				padding-right:5%;
+				padding-top:21px;
+				padding-bottom:15px;
+			}
+
+				.title1-part1 {
+					float:right;
+					font-size:30pt;
+					font-style:italic;
+					margin-right:5px;
+				}
+
+				.title1-part2 {
+					float:right;
+					font-size:30pt;
+					font-style:italic;
+					color:#7fb9d7;
+					margin-left:5px;
+				}
+
+				.title1-part3 {
+					clear:right;
+					float:right;
+					font-size:10pt;
+					margin-right:10%;
+				}
+
+			.url-bar {
+				background-color:black;
+				clear:right;
+				float:right;
+				width:780px;
+
+			}
+
+				.url-block1 {
+					float:left;
+					color:#7fb9d7;
+					font-size:14pt;
+					font-style:italic;
+					font-weight: bold;
+					padding-right:30px;
+					padding-left:30px;
+					padding-top:14px;
+					padding-bottom:14px;
+					margin-right:-20px;
+				}
+
+				.url-block {
+					float:left;
+					color:#7fb9d7;
+					font-size:14pt;
+					font-style:italic;
+					font-weight: bold;
+					padding-right:30px;
+					padding-left:30px;
+					padding-top:14px;
+					padding-bottom:14px;
+					margin-left:-50px;
+					margin-right:-20px;
+				}
+
+				.arrow-up {
+					width: 0; 
+					height: 0; 
+					border-left: 50px solid transparent;
+					border-right: 50px solid transparent;
+					
+					border-bottom: 50px solid white;
+					float:left;
+				}
+				.arrow-updecale {
+					width: 0; 
+					height: 0; 
+					border-left: 50px solid transparent;
+					border-right: 50px solid transparent;
+					
+					border-bottom: 50px solid black;
+					float:left;
+					margin-left:-98px;
+				}
+
+				.share {
+					float:right;
+					color:white;
+					font-size:14pt;
+					font-style:italic;
+					font-weight: bold;
+					padding-right:10px;
+					padding-left:10px;
+					padding-top:14px;
+					padding-bottom:14px;
+					width:20px;
+				}
+
+				.search {
+					float:right;
+					padding-right:10px;
+					padding-left:10px;
+					padding-top:14px;
+					padding-bottom:14px;
+					width:20%;
+				}
+
+				.search-text {
+					border:solid 1px black;
+					width:100%;
+				}
+
+/* fin bar */
+
+/* contenu principal */
+
+	.main-content {
+		margin-top:100px;
+		width:910px;
+		min-height:10px;
+		overflow:hidden;
+	}
+
+		.video {
+			float:left;
+			width:645px;
+		}
+
+			.videotitle {
+				width:625px;
+				height:30px;
+				background-color:black;
+				color:white;
+				padding:10px;
+				font-weight:bold;
+				font-size:15pt;
+			}
+
+			.videosubtitle {
+				width:635px;
+				background-color:black;
+				border-top:1px solid grey;
+				color:white;
+				padding:5px;
+				font-weight:bold;
+			}
+
+			.videocontent {
+				margin-top:20px;
+				width:641px;
+				padding:2.5px;
+				background-color:black;
+				margin-left:auto;
+				margin-right:auto;
+			}
+
+		.sidebar {
+			float:right;
+			width:230px;
+			font-weight:bold;
+		}
+
+			.sidebartitle {
+				background-color:black;
+				color:white;
+				padding:6px;
+			}
+
+			.sidebarcontent {
+				padding:5px;
+				padding-top:10px;
+				padding-bottom:10px;
+				margin-bottom:10px;
+				font-size:9pt;
+				font-weight:normal;
+				text-align:justify;
+			}
+
+				h3 {
+					padding:0;
+					padding-bottom:10px;
+					margin:0;
+					color:#7fb9d7;
+					font-size:10pt;
+				}
+
+
+/*texte en gras*/
+.important {
+	display:inline;
+	font-weight:bold;
+}
+
+/*latest videos*/
+
+	.latest {
+		margin-top:30px;
+		border-top:20px solid black;
+		margin-bottom:30px;
+		width:910px;
+	}
+
+		.latest h2 {
+			margin:0;
+			padding:0;
+			width:910px;
+		}
+
+		.thumbnailsblock {
+			margin-top:5px;
+			width:910px;
+			overflow:hidden;
+		}
+
+			.thumbnail {
+				background-color:black;
+				width:140px;
+				height:135px;
+				float:left;
+				margin-left:5.8px;
+				margin-right:5.8px;
+			}
+
+				.thumbnail-picture {
+					height:105px;
+					width:140px;
+					display:block;
+				}
+
+				.thumbnail-title {
+					height:30px;
+					width:140px;
+					display:block;
+					background-color:white;
+				}
+
+/* Catégories */
+
+	.category {
+		width:910px;
+		color:white;
+		padding:10px;
+		font-size:10pt;
+		background-color:black;
+	}
+
+	.arrow-down {
+		width: 0; 
+		height: 0; 
+		border-left: 12px solid transparent;
+		border-right: 12px solid transparent;
+		
+		border-top: 12px solid black;
+		margin-left:700px;
+	}

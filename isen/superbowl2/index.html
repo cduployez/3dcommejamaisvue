@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+	<header>
+		<title>American Football Live</title>
+		<link rel="stylesheet" type="text/css" href="style_superbowl.css" title="Design1"/>
+	</header>
+
+	<body>
+		<div id="body">
+
+			<div id="board">
+				<div class="teamboard">
+
+					<div class="teamname">
+						<h2 class="nameteam1">Team 1</h2>
+					</div>
+
+					<div class="teamlogo" id="logoleft">
+						<img src="team1.jpg"/>
+					</div>
+
+					<button type="button" class="admin timeout" id="timeout1">Take Timeout</button>
+
+					<div class="teamcheckboard" id="checkleft">
+						<form>
+							<div class="check">
+								<div class="check1 marker"></div>
+							</div>
+							<div class="check">
+								<div class="check1 marker"></div>
+							</div>
+							<div class="check">
+								<div class="check1 marker"></div>
+							</div>
+						</form>
+					</div>
+				</div> 
+
+
+				<div id="scoreboard">
+					<div class="teamname">
+						<h2>Score</h2>
+					</div>
+					<div class="score">
+						<p><div id="scoresuperbowlteam1">00</div> - <div id="scoresuperbowlteam2">00</div></p>
+					</div>
+					<div class="admin" id="timetools">
+						<a href="javascript:match.decrementScore(0,1)">Team 1 -</a>
+
+						<a href="javascript:match.incrementScore(0,1)">Team 1 +</a>
+
+						<a href="javascript:match.decrementScore(1,1)">Team 2 -</a>
+
+						<a href="javascript:match.incrementScore(1,1)">Team 2 +</a>						
+					</div>
+
+					<div id="time">
+						<p id="ptime" class="timepaused">00:00:00</p>
+					</div>
+					<div class="admin" id="timetools">
+						<button type="button" id="startChrono">Play</button>
+						<button type="button" id="stopChrono">Pause</button>
+						<button type="button" id="resetChrono">Reset</button>
+					</div>
+
+					<div class="table">
+						<table>
+							<thead>
+								<td></td>
+								<td class="admin quarters">01</td>
+								<td class="admin quarters">02</td>
+								<td class="admin quarters">03</td>
+								<td class="admin quarters">04</td>
+							</thead>
+							<tr id="trteam1">
+								<td class="tdteamname nameteam1">Team 1</td>
+								<td class="quarter1 running">0</td>
+								<td class="quarter2">0</td>
+								<td class="quarter3">0</td>
+								<td class="quarter4">0</td>
+							</tr>
+							<tr id="trteam2">
+								<td class="tdteamname nameteam2">Team 2</td>
+								<td class="quarter1 running">0</td>
+								<td class="quarter2">0</td>
+								<td class="quarter3">0</td>
+								<td class="quarter4">0</td>
+							</tr>
+						</table>
+
+					</div>
+				</div>
+
+				<div class="teamboard">
+
+					<div class="teamname">
+						<h2 class="nameteam2">Team 2</h2>
+					</div>
+
+					<div class="teamlogo" id="logoright">
+						<img src="team2.jpg"/>
+					</div>
+
+					<button type="button" class="admin timeout" id="timeout2">Take timeout</button>
+
+					<div class="teamcheckboard" id="checkright">
+						<form>
+							<div class="check">
+								<div class="check2 marker"></div>
+							</div>
+							<div class="check">
+								<div class="check2 marker"></div>
+							</div>
+							<div class="check">
+								<div class="check2 marker"></div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+
+			<div id="timeline">
+
+				<div class="timelinerow" id="showhidetimeline">
+					<button type="button" id="toggleTimeline">-</button><h2 id="timelineh2" class="h2opened">Timeline</h2>
+				</div>
+				<div class="admin timelinerow">
+					<form>
+						<div class="form-control"><label>
+							<select id="selectTeam">
+						    	<option id="team1selectoption" class="nameteam1" label="Team 1" value="0">Team 1</option>
+						    	<option id="team2selection" class="nameteam2" label="Team 2" value="1">Team 2</option>
+						    	<option label="Both" value="2">Both</option>
+							</select>
+						</label></div>
+						<div class="form-control"><label>
+							<select id="selectAction">
+							    <option label="Touchdown" value="touchdown">Touchdown</option>
+							    <option label="Safety" value="safety">Safety</option>
+							    <option label="1pt Transfo" value="1pttransfo">1pt Transfo</option>
+							    <option label="2pt Transfo" value="2pttransfo">2pt Transfo</option>
+							    <option label="Field Goal" value="field goal">Field Goal</option>
+						    	<option label="None" value="none">None</option>
+							</select>
+						</label></div>
+							<input type="text" id="commentInput"/>
+							<input type="submit" id="submit" value="Add"/>
+					</form>
+				</div>
+
+				<div id="timelinepage">
+					<div class="timelinerow">
+						<div class="timelineactionleft"><p>The match is about to start</p></div>
+
+						<div class="timelinetime">
+							<p>00:00:00</p>
+						</div>
+
+						<div class="timelineactionright">
+							<p>The match is about to start</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+<script src="jQuery.js"></script>
+<script src="match.js"></script>
+<script src="chrono.js"></script>
+<!--<script src="americanfootball.js"></script>
+<script src="chronometer.js"></script>-->
+<script src="reverseDisplay.js"></script>
+
+		</div>
+	</body>
+</html>
+
+
+<!--
+
+Comment faire côté serveur ?
+
+	Copier -> nouveau projet
+	
+	1.Stocker les données (Objets chrono, match, etc...) côté serveur via des routes dans NodeJS.
+		Chrono et ses méthodes : côté serveur
+			Temps, quart-temps, remettre à zéro doit pouvoir être géré par le serveur
+		Gestion d'une équipe
+
+-->

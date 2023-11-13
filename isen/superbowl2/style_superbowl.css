@@ -1,0 +1,496 @@
+body {
+	margin:0;
+	background-color:black;
+	font-family:sintony, monospace;
+}
+
+@font-face {
+	font-family: "sintony";
+	src: url("fonts/Sintony-Regular.ttf");
+}
+
+@font-face {
+	font-family: "clock";
+	src: url("fonts/ds_digital/DS-DIGI.TTF");
+}
+
+@font-face {
+	font-family: "scoreboard";
+	src: url("fonts/score_board/scoreboard.ttf");
+}
+
+#body {
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+	min-height:10px;
+	overflow:hidden;
+	margin-top:20px;
+	color:red;
+}
+
+
+/******* BOARD *******/
+
+#board {
+	font-family:scoreboard;
+}
+
+.teamboard {
+	margin-top:50px;
+	background-color:rgba(255,0,255,0.05);
+	/*border:1px solid white;*/
+	width:25%;
+	min-height:10px;
+	float:left;
+	overflow:hidden;
+	border-radius:5px;
+    box-shadow:0px 0px 10px red;
+    margin:2.5%;
+}
+	/******* TEAM BOARD *******/
+
+.teamname {
+	width:100%;
+	display:block;
+}
+
+h2 {
+	text-align:center;
+	vertical-align:middle;
+}
+
+#timelineh2 {
+	display:inline-block;
+	margin-right:10%;
+}
+
+.h2closed:after {
+	margin-left:3%;
+	content:'<>';
+	color:red;
+	transform:rotate(90deg);
+    position:absolute;
+    pointer-events:none;
+
+}
+
+.h2opened:after {
+	margin-left:3%;
+	content:'><';
+	color:red;
+	transform:rotate(90deg);
+    position:absolute;
+    pointer-events:none;
+
+}
+
+.teamlogo {
+	clear:left;
+	width:100%;
+	height:180px;
+}
+
+.teamlogo img {
+	display:block;
+	max-width:70%;
+	max-height:160px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+}
+
+.teamcheckboard {
+	width:99%;
+}
+
+#checkleft {
+	float:left;
+}
+
+#checkright {
+	float:right;
+}
+
+
+.check {
+	float:left;
+	width:33%;
+	text-align:center;
+}
+
+.marker {
+	height:15px;
+	width:15px;
+	background-color:red;
+	margin:auto;
+	margin-bottom:10px;
+	border-radius:50px;
+}
+
+.markerRed {
+	height:10px;
+	width:10px;
+	background-color:rgb(255,0,0);
+	margin:auto;
+	margin-bottom:15px;
+	border-radius:50px;
+	border-style:dotted;
+	border:1px dotted red;
+	cursor:pointer;
+	margin-bottom:5px;
+}
+
+.markerBlack {
+	height:10px;
+	width:10px;
+	background-color:rgb(75,0,0);
+	margin:auto;
+	margin-bottom:15px;
+	border-radius:50px;
+	border-style:dotted;
+	border:1px dotted red;
+	cursor:pointer;
+	margin-bottom:5px;
+}
+
+.markerRed:hover, .markerBlack:hover{
+	height:15px;
+	width:15px;
+}
+
+.markerDead {
+	height:10px;
+	width:10px;
+	background-color:rgb(75,0,0);
+	margin:auto;
+	margin-bottom:15px;
+	border-radius:50px;
+	border-style:dotted;
+	border:1px dotted red;
+}
+
+#scoreboard {
+	/*border:1px dotted black;*/
+	width:40%;
+	min-height:10px;
+	float:left;
+}
+
+.score {
+	width:100%;
+	padding:10px;
+	text-align:center;
+	font-family:scoreboard;
+	font-size:50pt;
+}
+
+#scoresuperbowlteam1 {
+	display:inline;
+}
+
+#scoresuperbowlteam2 {
+	display:inline;
+}
+
+#time {
+	width:100%;
+	padding:10px;
+	text-align:center;
+	font-family:clock;
+	font-size:30pt;
+}
+
+.timepaused
+{
+	color:rgb(100,100,100);
+}
+
+#timetools {
+	margin-top:-50px;
+	width:100%;
+	padding:10px;
+	text-align:center;
+	font-family:clock;
+	font-size:10pt;
+	margin-bottom:20px;
+}
+
+.timeout {
+	margin:auto;
+	margin-bottom:10px;
+	display:block;
+	background-color:transparent;
+}
+
+button, a {
+	text-decoration:none;
+	font-family:clock;
+	background-color:black;
+	border:1px dotted red;
+	color:red;
+	padding:1px;
+	text-align:center;
+	vertical-align: middle;
+	margin-right:2px;
+	margin-left:2px;
+}
+
+button:hover, a:hover {
+	background-color:red;
+	color:black;
+	box-shadow:0px 0px 10px red;
+	border-radius:5px;
+}
+
+.table thead {
+	text-align:center;
+}
+
+.table table {
+	width:180%;
+	text-align: center;
+	vertical-align: middle;
+	font-size:20pt;
+	margin-left:-40%;
+	margin-right:40%;
+}
+
+.tdteamname {
+	width:50%;
+	text-align:center;
+}
+
+.first {
+	box-shadow:0px 0px 2px red;
+}
+
+.first:before {
+	content:'1. ';
+	/*margin-right:20px;
+	color:white;
+	border-radius:50px;
+	background-color:red;*/
+}
+
+.second:before {
+	content:'2. ';
+}
+
+.table tr {
+	height:30px;
+}
+
+.table td {
+	/*border:1px dotted grey;*/
+}
+
+.running {
+	background-color:rgb(100,0,0);
+	color:white;
+}
+
+.winning {
+	background-color:rgb(200,0,0);
+}
+
+.quarters {
+	cursor:pointer;
+}
+
+thead .running {
+
+}
+
+/******* TIMELINE *******/
+
+#timeline {
+	clear:both;
+	float:left;
+	margin-top:50px;
+	width:100%;
+	margin-left:0 auto;
+	margin-right:0 auto;
+	margin-bottom:100px;
+	font-size:12pt;
+}
+
+.timelinerow a {
+	text-decoration:none;
+	color:red;
+}
+
+.timelinerow {
+	display:block;
+	width:100%;
+	overflow:hidden;
+	border-top:1px dotted grey;
+	text-align:center;
+}
+
+.timelinerow:hover {
+	background-color:rgba(255,0,255,0.03);
+}
+
+.timelineactionleft {
+	width:39%;
+	text-align:center;
+	padding:0;
+	float:left;
+}
+
+.timelineactionleft p {
+	width:100%;
+	height:20px;
+}
+
+.timelineactionleft input{
+	width:100%;
+	background-color:rgba(50,50,50,0.5);
+	border:1px dotted red;
+	color:red;
+	font-family:scoreboard;
+	font-size:13pt;
+}
+
+.timelineactionright p {
+	width:100%;
+	height:20px;
+}
+
+.timelineactionright input{
+	width:100%;
+	background-color:rgba(50,50,50,0.5);
+	border:1px dotted red;
+	color:red;
+	font-family:scoreboard;
+	font-size:13pt;
+	text-align:center;
+}
+
+.timelineactionright {
+	width:39%;
+	text-align:center;
+	padding:0;
+	float:right;
+}
+
+.timelinetime {
+	width:19%;
+	float:left;
+	text-align:center;
+	padding:0;
+	margin-left:1.5%;
+	font-family:clock;
+	font-size:16pt;
+}
+
+#timelinepage2 {
+	display:none;
+	margin-top:-20px;
+}
+
+#showhidetimeline {
+	cursor:pointer;
+}
+
+input:hover {
+    box-shadow:0px 0px 10px red;
+}
+
+/*.form-control {
+	background-color:black;
+	font-family:clock;
+	color:red;
+	font-size:14pt;
+	border:1px dotted red;
+	appearance:none;
+}*/
+
+.form-control {
+	padding:1px;
+	border:1px dotted red;
+	display:inline-block;
+}
+
+select {
+    /*padding:3px;*/
+    background: black;
+    border:1px solid black;
+    color:red;
+    font-family:clock;
+    font-size:14pt;
+    display: inline-block;
+}
+
+label {position:relative;}
+
+label:after {
+	content:'>';
+	font:11px "Consolas", monospace;
+	color:red;
+	transform:rotate(90deg);
+	right:12px; top:3px;
+    position:absolute;
+    pointer-events:none;
+}
+
+label:before {
+    content:'';
+    right:8px; top:-5px;
+    width:17px; height:26px;
+    background:black;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+
+#commentInput {
+	padding:3px;
+	border:1px dotted red;
+	font-family:clock;
+	font-size:14pt;
+	color:red;
+	background-color:black;
+	width:50%;
+}
+
+#submit {
+	border:1px dotted red;
+	font-family:clock;
+	font-size:14pt;
+	color:red;
+	background-color:black;
+}
+
+#submit:hover {
+	background-color:red;
+	color:black;
+	border-radius:5px;
+}
+
+form {
+	display:inline;
+}
+
+#toggleTimeline {
+	display:inline-block;
+	margin-right:10%;
+	font-size:14pt;
+	font-family:sintony;
+	border-radius:50px;
+	width:30px;
+	height:30px;
+}
+
+/*Si resolution en dessous de 1092.8px:*/
+@media all and (max-width: 1092.8px){
+	#body {width:100%;
+		margin:0;}
+	/*.topbar{display:none;}*/
+}
+
+/*Si resolution au dessus de 1092.8px:*/
+@media all and (min-width:1092.8px){
+	/*.topbar{display:block;}*/
+}
